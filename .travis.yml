@@ -1,6 +1,11 @@
-sudo: false
+sudo: true
 language: python
 dist: bionic
+
+script: |
+    sudo apt update -y \
+    sudo apt install --only-upgrade docker-ce -y
+
 matrix:
   include:
     - python: 2.7
