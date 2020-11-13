@@ -1,5 +1,6 @@
 sudo: false
 language: python
+dist: bionic
 matrix:
   include:
     - python: 2.7
@@ -10,7 +11,6 @@ matrix:
       env: TOXENV=py36
     - python: 3.7
       env: TOXENV=py37
-      dist: bionic
       sudo: true
     - env: TOXENV=flake8
 
