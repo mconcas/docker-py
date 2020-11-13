@@ -15,11 +15,12 @@ matrix:
       sudo: true
     - env: TOXENV=flake8
 
-script: |
+install:
+    - pip install tox==2.9.1
+
+before_script: |
     sudo apt update -y \
     sudo apt install --only-upgrade docker-ce -y
 
-install:
-    - pip install tox==2.9.1
 script:
     - tox
