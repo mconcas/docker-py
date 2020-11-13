@@ -20,7 +20,7 @@ install:
 
 before_script: |
     sudo apt update -y
-    sudo apt install --only-upgrade docker-ce -y
+    sudo apt install --only-upgrade docker.io -y
 
 script:
     - tox
